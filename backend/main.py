@@ -293,7 +293,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="Lumina IDE API",
     description="Intelligent Development Environment — Local Intelligence, Global Performance.",
-    version="7.0.0",
+    version="10.0.1",
     lifespan=lifespan,
 )
 

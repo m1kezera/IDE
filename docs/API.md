@@ -48,15 +48,27 @@ data: {"token": "", "done": true}
 
 ## Workspace & Files
 
+**From `router.py`** (main router):
+
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `GET` | `/workspace/check` | Get workspace status and file tree |
+| `POST` | `/workspace/check` | Get workspace status and file tree |
 | `POST` | `/workspace/create-file` | Create a new file |
 | `POST` | `/workspace/create-folder` | Create a new folder |
-| `GET` | `/workspace/file?path=...` | Read file content |
-| `POST` | `/workspace/file` | Write file content |
 | `POST` | `/workspace/rename` | Rename a file or folder |
 | `POST` | `/workspace/move` | Move a file or folder |
+| `DELETE` | `/workspace/file` | Delete a file |
+
+**From `workspace.py`** (workspace router):
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/workspace/current` | Get current workspace path |
+| `POST` | `/workspace/open` | Open/set workspace directory |
+| `GET` | `/workspace/browse` | Native folder browser dialog |
+| `GET` | `/workspace/tree` | Get full file tree structure |
+| `GET` | `/workspace/file?path=...` | Read file content |
+| `PUT` | `/workspace/file` | Write/update file content |
 
 ---
 
@@ -225,8 +237,9 @@ data: {"token": "", "done": true}
 | Protocol | Endpoint | Description |
 |----------|----------|-------------|
 | `WebSocket` | `/ws/watcher` | File system change notifications |
+| `WebSocket` | `/ws/terminal/{port}` | Interactive PTY terminal I/O |
 
-> The terminal uses a subprocess-based PTY, not WebSocket.
+> Terminal logs can also be fetched via `GET /terminal/logs/{port}`.
 
 ---
 
@@ -246,3 +259,27 @@ data: {"token": "", "done": true}
 | `POST` | `/edge/start` | Start edge function sandbox |
 | `DELETE` | `/edge/stop/{sandbox_id}` | Stop edge function sandbox |
 | `GET` | `/edge/preview/{sandbox_id}/{file_path}` | Preview edge function output |
+
+---
+
+## Extensions
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/extensions/` | List all extensions |
+| `GET` | `/extensions/path` | Get extensions directory path |
+| `POST` | `/extensions/{extension_id}/toggle` | Enable/disable an extension |
+
+---
+
+## Setup Manager
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/setup/status` | Setup wizard status |
+| `POST` | `/setup/install` | Run setup installation |
+| `GET` | `/setup/motor/status` | Ollama motor status |
+| `POST` | `/setup/motor/toggle` | Start/stop Ollama motor |
+| `GET` | `/setup/models/list` | List available models for setup |
+| `DELETE` | `/setup/models/{name}` | Remove a model |
+| `POST` | `/setup/pull` | Pull a model during setup |

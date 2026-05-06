@@ -104,7 +104,8 @@ All panels follow the same pattern:
 ```
 backend/
 ├── main.py              # FastAPI app factory, CORS, lifespan hooks
-├── router.py            # All API routes (~3100 lines, single router)
+│                        # Registers 5 routers: api, workspace, extensions, terminal, setup
+├── router.py            # Main API routes (~3100 lines)
 ├── config.py            # Settings from .env + cloud config persistence
 ├── database.py          # SQLite engine, auto-migration, sessions
 ├── models.py            # SQLModel schemas (UsageLog, ChatSession, Library*, Memory)
@@ -134,18 +135,24 @@ backend/
 │                        #   - LLM response cache
 │                        #   - Parallel model execution
 │
-├── terminal.py          # PTY terminal via subprocess
-├── workspace.py         # File tree, read/write, workspace scanning
-├── handler_*.py         # Model-size-specific prompt handlers
+├── workspace.py         # File tree, read/write, workspace scanning (own router: /api/workspace)
+├── terminal.py          # PTY terminal via WebSocket (own router: /api/ws/terminal)
+├── extensions.py        # Plugin system management (own router: /api/extensions)
+├── setup_manager.py     # Setup wizard and motor control (own router: /api/setup)
+├── handler_*.py         # Model-size-specific prompt handlers (small, medium, large, cloud)
 ├── model_tiers.py       # Model classification and capability mapping
+├── ollama_orchestrator.py # Ollama process lifecycle and motor management
 ├── sentinel.py          # Security scanning and Shield reports
 ├── healer.py            # Auto-healing for common errors
 ├── watcher.py           # File system watcher for live reload
 ├── skills.py            # Extensible skill system for the agent
-├── edge_runtime.py      # Edge functions runtime
+├── edge_runtime.py      # Edge functions sandbox runtime
 ├── predictor.py         # Code completion predictions
 ├── telemetry.py         # Usage tracking and analytics
-└── identity.py          # HWID-based identity binding
+├── identity.py          # HWID-based identity binding
+├── security_vault.py    # Encrypted secrets storage
+├── logger_utils.py      # SSE logging utilities
+└── chunker.py           # Text chunking for Brain indexing
 ```
 
 ### Database Schema
@@ -173,8 +180,8 @@ All communication is via **HTTP REST** to `http://127.0.0.1:8001/api/`.
 
 - **Standard requests**: JSON request/response
 - **AI generation**: Server-Sent Events (SSE) streaming via `text/event-stream`
-- **Terminal**: WebSocket at `ws://127.0.0.1:8001/ws/terminal`
-- **File watcher**: WebSocket at `ws://127.0.0.1:8001/ws/watcher`
+- **Terminal**: WebSocket at `ws://127.0.0.1:8001/api/ws/terminal/{port}`
+- **File watcher**: WebSocket at `ws://127.0.0.1:8001/api/ws/watcher`
 
 ### Electron → Frontend
 

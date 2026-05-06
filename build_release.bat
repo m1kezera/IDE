@@ -1,6 +1,6 @@
 @echo off
 echo ============================================================
-echo   Lumina IDE v9.0 — Master Release Pipeline
+echo   Lumina IDE v10.0 — Master Release Pipeline
 echo ============================================================
 echo.
 
