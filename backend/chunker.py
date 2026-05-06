@@ -1,4 +1,4 @@
-"""Lumina IDE — Module B: Smart Context Processor (Chunking).
+"""Project Y — Module B: Smart Context Processor (Chunking).
 
 Implements sliding-window code splitting so local 7B models
 (Mistral / Llama) don't lose accuracy on long files.
@@ -6,10 +6,41 @@ Implements sliding-window code splitting so local 7B models
 
 from __future__ import annotations
 
-import tiktoken
+import logging
+
+log = logging.getLogger("projecty.chunker")
 
 # Use cl100k_base — same encoder used by GPT-4 / GPT-3.5
-_ENCODING = tiktoken.get_encoding("cl100k_base")
+# Falls back to simple word-based approximation inside PyInstaller
+_ENCODING = None
+try:
+    import tiktoken
+    _ENCODING = tiktoken.get_encoding("cl100k_base")
+    log.info("✅ tiktoken cl100k_base carregado com sucesso")
+except Exception as e:
+    log.warning(f"⚠️ tiktoken indisponível ({e}), usando fallback simples")
+
+
+class _FallbackEncoding:
+    """Simple word-based tokenizer fallback for PyInstaller environments."""
+    def __init__(self):
+        self._last_text = ""
+        self._last_words = []
+
+    def encode(self, text: str) -> list:
+        self._last_text = text
+        self._last_words = text.split()
+        return list(range(len(self._last_words)))
+    
+    def decode(self, tokens: list) -> str:
+        if not tokens or not self._last_words:
+            return ""
+        start = tokens[0]
+        end = tokens[-1] + 1
+        return " ".join(self._last_words[start:end])
+
+if _ENCODING is None:
+    _ENCODING = _FallbackEncoding()
 
 DEFAULT_MAX_TOKENS = 1200
 DEFAULT_OVERLAP = 150

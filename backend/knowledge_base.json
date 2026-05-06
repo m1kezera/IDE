@@ -1,0 +1,29 @@
+{
+    "project_name": "Lumina IDE",
+    "version": "1.2",
+    "stack": {
+        "backend": {
+            "framework": "FastAPI (Async)",
+            "orm": "SQLModel",
+            "database": "SQLite (pulsyce.db)",
+            "language": "Python 3.10+"
+        },
+        "frontend": {
+            "framework": "React 18",
+            "build_tool": "Vite",
+            "styling": "Tailwind CSS",
+            "animations": "GSAP",
+            "language": "JavaScript/JSX (or TypeScript/TSX if configured)"
+        },
+        "devops": {
+            "dependency_management": "Python dependencies via automatic pip install detected by AI agent during import errors."
+        }
+    },
+    "architecture_rules": [
+        "Idempotency in file operations: always check if files/directories exist or handle creations gracefully.",
+        "Path sanity: use os.path.normpath and absolute/relative boundaries carefully to construct safe paths.",
+        "Logging: mandatory telemetry logging for model usage.",
+        "Agentic flow: AI should always generate a LUMINA_PLAN.md before extensive autonomous execution (Chain of Thought).",
+        "Self-Healing: Se o terminal retornar um erro de 'ModuleNotFoundError' ou 'Could not find import', você DEVE analisar a dependência e rodar `pip install <pacote>` ou `npm install <pacote>` de forma autônoma e imediata sem perguntar."
+    ]
+}

@@ -1,4 +1,4 @@
-"""Lumina IDE — Workspace & File System API.
+"""Project Y — Workspace & File System API.
 
 Provides endpoints for browsing, reading, and editing files
 within a user-selected workspace directory. Workspace path
@@ -27,14 +27,17 @@ TEXT_EXTENSIONS = {
     ".csv", ".sql", ".r", ".java", ".c", ".cpp", ".h", ".hpp", ".cs",
     ".go", ".rs", ".rb", ".php", ".swift", ".kt", ".lua", ".vim",
     ".cfg", ".ini", ".conf", ".dockerfile", ".makefile",
-    ".svelte", ".vue", ".astro",
+    ".svelte", ".vue", ".astro", ".canvas",
 }
 
 SKIP_DIRS = {
-    "node_modules", ".git", "__pycache__", ".venv", "venv",
-    ".next", ".nuxt", "dist", "build", ".cache", ".idea",
-    ".vs", ".vscode", "target", "bin", "obj", ".svelte-kit",
+    ".git", "__pycache__", ".venv", "venv",
+    ".next", ".nuxt", ".cache", ".idea",
+    ".vs", ".vscode", ".svelte-kit",
 }
+
+# Directories that appear in the tree but only expand 1 level deep
+SHALLOW_DIRS = {"node_modules", "dist", "build", "target", "bin", "obj"}
 
 MAX_FILE_SIZE = 1_000_000
 MAX_TREE_DEPTH = 5
@@ -125,8 +128,31 @@ def _build_tree(base: str, rel: str = "", depth: int = 0, counter: Optional[List
             if name in SKIP_DIRS:
                 continue
             counter[0] += 1  # type: ignore
-            children = _build_tree(base, rel_path, depth + 1, counter)
-            items.append({"name": name, "path": rel_path, "type": "dir", "children": children})
+            if name in SHALLOW_DIRS:
+                # Show folder but only list immediate children (no recursion)
+                shallow_children = []
+                try:
+                    for sname in sorted(os.listdir(entry_path)):
+                        if counter[0] > MAX_TREE_ITEMS:
+                            break
+                        spath = os.path.join(entry_path, sname)
+                        srel = f"{rel_path}/{sname}"
+                        counter[0] += 1
+                        if os.path.isdir(spath):
+                            shallow_children.append({"name": sname, "path": srel, "type": "dir", "children": []})
+                        else:
+                            ext2 = pathlib.Path(sname).suffix.lower()
+                            try:
+                                sz = os.path.getsize(spath)
+                            except OSError:
+                                sz = 0
+                            shallow_children.append({"name": sname, "path": srel, "type": "file", "ext": ext2, "size": sz, "is_text": _is_text_file(sname)})
+                except PermissionError:
+                    pass
+                items.append({"name": name, "path": rel_path, "type": "dir", "children": shallow_children})
+            else:
+                children = _build_tree(base, rel_path, depth + 1, counter)
+                items.append({"name": name, "path": rel_path, "type": "dir", "children": children})
         else:
             counter[0] += 1  # type: ignore
             ext = pathlib.Path(name).suffix.lower()
@@ -166,36 +192,83 @@ async def open_folder(body: OpenFolderRequest):
 
 @router.get("/browse")
 async def browse_folder():
-    import threading
-    result = {"path": None}
+    import subprocess
+    import sys
+    try:
+        if sys.platform == 'win32':
+            # Modern Windows native folder picker (IFileOpenDialog via COM)
+            # This is the same dialog used by modern apps — with sidebar,
+            # favorites, search bar etc. NOT the ancient FolderBrowserDialog.
+            ps_script = r'''
+Add-Type -TypeDefinition @"
+using System;
+using System.Runtime.InteropServices;
 
-    def _pick():
-        try:
-            import tkinter as tk
-            from tkinter import filedialog
-            root = tk.Tk()
-            root.withdraw()
-            root.attributes("-topmost", True)
-            folder = filedialog.askdirectory(title="Selecionar pasta do projeto")
-            root.destroy()
-            if folder:
-                result["path"] = folder  # type: ignore
-        except Exception:
-            pass
+[ComImport, Guid("DC1C5A9C-E88A-4DDE-A5A1-60F82A20AEF7")]
+class FileOpenDialog {}
 
-    t = threading.Thread(target=_pick, daemon=True)
-    t.start()
-    t.join(timeout=120)
+[ComImport, Guid("42F85136-DB7E-439C-85F1-E4075D135FC8"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+interface IFileOpenDialog {
+    [PreserveSig] int Show([In] IntPtr hwnd);
+    void SetFileTypes();
+    void SetFileTypeIndex();
+    void GetFileTypeIndex();
+    void Advise();
+    void Unadvise();
+    void SetOptions([In] uint fos);
+    void GetOptions();
+    void SetDefaultFolder();
+    void SetFolder();
+    void GetFolder();
+    void GetCurrentSelection();
+    void SetFileName();
+    void GetFileName();
+    void SetTitle([In, MarshalAs(UnmanagedType.LPWStr)] string pszTitle);
+    void SetOkButtonLabel();
+    void SetFileNameLabel();
+    [PreserveSig] int GetResult(out IShellItem ppsi);
+}
 
-    folder_path = result.get("path")
-    if isinstance(folder_path, str):
-        global _workspace_path, _loaded
-        _loaded = True
-        ws_path = os.path.abspath(folder_path)
-        _workspace_path = ws_path
-        _save_workspace_to_db(ws_path)
-        return {"path": ws_path, "status": "opened"}
+[ComImport, Guid("43826D1E-E718-42EE-BC55-A1E261C37BFE"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+interface IShellItem {
+    void BindToHandler();
+    void GetParent();
+    void GetDisplayName([In] uint sigdnName, [MarshalAs(UnmanagedType.LPWStr)] out string ppszName);
+}
+"@
 
+$dlg = New-Object FileOpenDialog
+$ifo = [IFileOpenDialog]$dlg
+$ifo.SetOptions(0x20)  # FOS_PICKFOLDERS
+$ifo.SetTitle("Selecione a pasta do projeto")
+$hr = $ifo.Show([IntPtr]::Zero)
+if ($hr -eq 0) {
+    $item = $null
+    $ifo.GetResult([ref]$item)
+    $path = $null
+    $item.GetDisplayName(0x80058000, [ref]$path)
+    Write-Output $path
+}
+'''
+            result = subprocess.check_output(
+                ["powershell", "-NoProfile", "-Command", ps_script],
+                text=True, timeout=120
+            ).strip()
+            folder = result
+        else:
+            # Fallback for non-Windows: try tkinter
+            script = "import tkinter as tk, tkinter.filedialog as fd; root=tk.Tk(); root.withdraw(); root.attributes('-topmost', True); print(fd.askdirectory())"
+            folder = subprocess.check_output([sys.executable, "-c", script], text=True, timeout=120).strip()
+        
+        if folder and os.path.isdir(folder):
+            global _workspace_path, _loaded
+            _loaded = True
+            ws_path = os.path.abspath(folder)
+            _workspace_path = ws_path
+            _save_workspace_to_db(ws_path)
+            return {"path": ws_path, "status": "opened"}
+    except Exception:
+        pass
     return {"path": None, "status": "cancelled"}
 
 

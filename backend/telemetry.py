@@ -1,4 +1,4 @@
-"""Lumina IDE — Module C: Telemetry & Cost Analytics.
+"""Project Y — Module C: Telemetry & Cost Analytics.
 
 Persists token usage per call and computes dashboard aggregations
 (monthly spend, local vs cloud split, ROI / savings).

@@ -5,3 +5,5 @@ requests
 tiktoken
 python-dotenv
 pydantic-settings
+websockets
+cryptography
