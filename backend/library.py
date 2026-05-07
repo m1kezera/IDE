@@ -370,6 +370,248 @@ class ProjectYLibrary:
                 return prompt
             return prompt[:max_chars] + "\n[...truncated...]"
 
+    # ── Document Content Injection (v10.1) ────────────────────────
+
+    def _read_file_content(self, file_path: str) -> str:
+        """Read document content from disk using appropriate parser.
+        
+        Supports PDF (PyMuPDF), DOCX (python-docx), and plaintext (MD/TXT).
+        Returns formatted text with page/section markers for citation.
+        """
+        if not os.path.exists(file_path):
+            return ""
+
+        ext = os.path.splitext(file_path)[1].lower()
+        file_name = os.path.basename(file_path)
+
+        try:
+            # PDF
+            if ext == ".pdf" and _fitz is not None:
+                doc = _fitz.open(file_path)
+                parts = []
+                for page_num in range(len(doc)):
+                    page = doc.load_page(page_num)
+                    text = page.get_text("text").strip()
+                    if text:
+                        parts.append(f"[Página {page_num + 1}]\n{text}")
+                doc.close()
+                return "\n\n".join(parts)
+
+            # DOCX
+            elif ext == ".docx" and _docx is not None:
+                doc = _docx.Document(file_path)
+                parts = []
+                for para in doc.paragraphs:
+                    text = para.text.strip()
+                    if text:
+                        style = para.style.name if para.style else "Normal"
+                        if "Heading" in style or "Title" in style:
+                            level = ''.join(filter(str.isdigit, style)) or '1'
+                            prefix = '#' * int(level)
+                            parts.append(f"{prefix} {text}")
+                        else:
+                            parts.append(text)
+                # Tables
+                for i, table in enumerate(doc.tables):
+                    rows = []
+                    for row in table.rows:
+                        cells = [cell.text.strip() for cell in row.cells]
+                        rows.append(" | ".join(cells))
+                    parts.append(f"\n[Tabela {i+1}]\n" + "\n".join(rows))
+                return "\n".join(parts)
+
+            # Plaintext (MD, TXT, etc.)
+            else:
+                with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                    return f.read()
+
+        except Exception as e:
+            log.warning(f"⚠️ Failed to read {file_name}: {e}")
+            return ""
+
+    def get_all_content_for_injection(self, max_tokens: int = 8000) -> str:
+        """Return all library document content formatted for prompt injection.
+        
+        Reads stored documents from disk and formats with source metadata
+        for citation. Respects token budget with per-document fair distribution.
+        
+        Args:
+            max_tokens: Maximum total tokens for all document content combined.
+            
+        Returns:
+            Formatted string with document headers and content ready for
+            system prompt injection with citation markers.
+        """
+        docs = self.get_documents()
+        if not docs:
+            return ""
+
+        # Calculate per-document budget
+        per_doc_budget = max(1000, max_tokens // max(len(docs), 1))
+
+        try:
+            from chunker import _encoding
+            use_tiktoken = True
+        except Exception:
+            _encoding = None
+            use_tiktoken = False
+
+        sections = []
+        total_tokens = 0
+        loaded_docs = []
+
+        for doc_info in docs:
+            if total_tokens >= max_tokens:
+                break
+
+            file_path = doc_info.get("path", "")
+            doc_name = doc_info.get("name", "unknown")
+            doc_type = doc_info.get("type", "txt")
+            pages = doc_info.get("pages", 0)
+            words = doc_info.get("words", 0)
+
+            content = self._read_file_content(file_path)
+            if not content:
+                continue
+
+            # Truncate content to per-document budget
+            if use_tiktoken:
+                tokens = _encoding.encode(content)
+                remaining_budget = max_tokens - total_tokens
+                doc_budget = min(per_doc_budget, remaining_budget)
+                if len(tokens) > doc_budget:
+                    content = _encoding.decode(tokens[:doc_budget])
+                    content += f"\n[...documento truncado, {len(tokens) - doc_budget} tokens restantes...]"
+                doc_tokens = min(len(tokens), doc_budget)
+            else:
+                max_chars = per_doc_budget * 4
+                remaining_chars = (max_tokens - total_tokens) * 4
+                doc_max = min(max_chars, remaining_chars)
+                if len(content) > doc_max:
+                    content = content[:doc_max]
+                    content += "\n[...documento truncado...]"
+                doc_tokens = len(content) // 4  # rough estimate
+
+            # Build section with citation header
+            meta_parts = [doc_type.upper()]
+            if pages:
+                meta_parts.append(f"{pages} págs")
+            if words:
+                meta_parts.append(f"{words} palavras")
+            meta_str = " · ".join(meta_parts)
+
+            section = f"\n{'═' * 60}\n"
+            section += f"📄 DOCUMENTO: {doc_name} ({meta_str})\n"
+            section += f"   Cite como: [Fonte: {doc_name}]\n"
+            section += f"{'═' * 60}\n"
+            section += content
+            sections.append(section)
+
+            total_tokens += doc_tokens
+            loaded_docs.append(doc_name)
+
+        if not sections:
+            return ""
+
+        header = f"\n\n═══ BIBLIOTECA — {len(loaded_docs)} DOCUMENTO(S) CARREGADO(S) ═══\n"
+        header += f"Documentos: {', '.join(loaded_docs)}\n"
+        result = header + "\n".join(sections) + "\n═══ FIM DA BIBLIOTECA ═══\n"
+
+        log.info(f"📚 [LibraryInject] Injected {len(loaded_docs)} docs, ~{total_tokens} tokens")
+        return result
+
+    def get_document_list_summary(self) -> str:
+        """Return a compact summary of available library documents.
+        
+        Used in the citation header so the model knows what's available.
+        """
+        docs = self.get_documents()
+        if not docs:
+            return "Nenhum documento na biblioteca."
+
+        lines = []
+        for doc_info in docs:
+            name = doc_info.get("name", "?")
+            dtype = doc_info.get("type", "?").upper()
+            pages = doc_info.get("pages", 0)
+            words = doc_info.get("words", 0)
+            parts = [f"• {name} ({dtype})"]
+            if pages:
+                parts[0] += f" — {pages} páginas"
+            if words:
+                parts[0] += f", {words} palavras"
+            lines.append(parts[0])
+
+        return "\n".join(lines)
+
+    def search_by_keywords(self, query: str, max_results: int = 3, max_chars_per_result: int = 2000) -> List[Dict]:
+        """Keyword-based search through library document contents.
+        
+        Fallback search when Brain vector search is unavailable.
+        Scores documents by keyword overlap with the query, then
+        extracts the most relevant passages.
+        
+        Args:
+            query: Search query from the user
+            max_results: Maximum number of document snippets to return
+            max_chars_per_result: Maximum characters per snippet
+            
+        Returns:
+            List of dicts with 'content', 'file', 'doc_name', 'score'
+        """
+        docs = self.get_documents()
+        if not docs:
+            return []
+
+        query_words = set(query.lower().split())
+        # Remove stopwords (PT + EN)
+        stopwords = {"de", "da", "do", "em", "no", "na", "o", "a", "os", "as", "um", "uma",
+                      "e", "ou", "que", "com", "para", "por", "se", "não", "como",
+                      "the", "a", "an", "in", "on", "of", "to", "and", "or", "is", "it",
+                      "for", "with", "this", "that", "from", "what", "how", "are"}
+        query_words -= stopwords
+
+        if not query_words:
+            return []
+
+        scored_passages = []
+
+        for doc_info in docs:
+            file_path = doc_info.get("path", "")
+            doc_name = doc_info.get("name", "unknown")
+
+            content = self._read_file_content(file_path)
+            if not content:
+                continue
+
+            # Split into paragraphs/chunks for granular results
+            paragraphs = [p.strip() for p in content.split("\n\n") if len(p.strip()) > 50]
+            if not paragraphs:
+                paragraphs = [content[i:i+500] for i in range(0, len(content), 400)]
+
+            for para in paragraphs:
+                para_words = set(para.lower().split())
+                overlap = len(query_words & para_words)
+                if overlap > 0:
+                    # Boost score by match density
+                    density = overlap / max(len(para_words), 1)
+                    score = overlap + (density * 5)
+                    scored_passages.append({
+                        "content": para[:max_chars_per_result],
+                        "file": file_path,
+                        "doc_name": doc_name,
+                        "score": score,
+                    })
+
+        # Sort by score descending
+        scored_passages.sort(key=lambda x: -x["score"])
+        results = scored_passages[:max_results]
+
+        if results:
+            log.info(f"📚 [KeywordSearch] Found {len(results)} passages for query: {query[:50]}...")
+
+        return results
+
 
 # Singleton
 library = ProjectYLibrary()

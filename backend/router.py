@@ -230,8 +230,7 @@ def _stream_with_logging_and_files(prompt: str, model: str, settings: Settings, 
         log.warning(f"[Skills] Expansion failed: {e}")
 
     # ── Memory: Inject relevant memories into system prompt ──
-    # Skip in cloud mode — token budget already handles context control
-    if mode != "cloud":
+    if True:  # v10.1: enabled in all modes (was cloud-gated)
         try:
             from memory import inject_memories_to_prompt, auto_extract_and_save
             if enhanced_system_prompt:
@@ -567,6 +566,31 @@ async def generate(
     except Exception as e:
         log.error(f"Brain search failed: {e}")
 
+    # ─── Library Content Injection (v10.1) ────────────────────────
+    # When strict_library_mode is ON: inject ALL library documents content
+    # When OFF but library has docs: inject keyword-matched passages
+    library_context_str = ""
+    is_strict = getattr(body, "strict_library_mode", False)
+    try:
+        from library import library as lib_instance
+        lib_docs = lib_instance.get_documents()
+        if lib_docs:
+            if is_strict:
+                # In strict mode, inject full document content (higher budget)
+                library_context_str = lib_instance.get_all_content_for_injection(max_tokens=12000)
+                log.info(f"📚 [StrictMode] Full library injection: {len(library_context_str)} chars, {len(lib_docs)} docs")
+            else:
+                # In normal mode, inject relevant passages via keyword search
+                passages = lib_instance.search_by_keywords(body.prompt, max_results=3)
+                if passages:
+                    library_context_str = "\n\n═══ REFERÊNCIAS DA BIBLIOTECA ═══\n"
+                    for p in passages:
+                        library_context_str += f"\n--- De: {p['doc_name']} ---\n{p['content']}\n"
+                    library_context_str += "═══ FIM DAS REFERÊNCIAS ═══\n"
+                    log.info(f"📚 [NormalMode] Keyword library injection: {len(passages)} passages")
+    except Exception as e:
+        log.warning(f"Library injection failed: {e}")
+
     # Inject Workspace File Tree
     ws._load_workspace_from_db()
     tree_str = "[Nenhum workspace aberto]"
@@ -685,13 +709,25 @@ async def generate(
 
         # Build layers from highest to lowest priority
         # Tree is HIGH priority — the AI needs to see what files exist
-        layers = [
-            ("base", base_prompt),
-            ("tree", f"\n\n═══ WORKSPACE TREE ═══\n{tree_str}\n" if tree_str != "[Nenhum workspace aberto]" else ""),
-            ("personality", personality_str),
-            ("files", file_content_str),
-            ("brain", context_str),
-        ]
+        # v10.1: In strict mode, library has HIGHEST priority and tree/brain are deprioritized
+        if is_strict:
+            layers = [
+                ("base", base_prompt),
+                ("library", library_context_str),
+                ("personality", personality_str),
+                ("files", file_content_str),
+                ("tree", f"\n\n═══ WORKSPACE TREE ═══\n{tree_str}\n" if tree_str != "[Nenhum workspace aberto]" else ""),
+                ("brain", context_str),
+            ]
+        else:
+            layers = [
+                ("base", base_prompt),
+                ("tree", f"\n\n═══ WORKSPACE TREE ═══\n{tree_str}\n" if tree_str != "[Nenhum workspace aberto]" else ""),
+                ("personality", personality_str),
+                ("library", library_context_str),
+                ("files", file_content_str),
+                ("brain", context_str),
+            ]
 
         # Start with all layers, progressively strip from lowest priority
         enhanced_system_prompt = ""
@@ -728,10 +764,41 @@ async def generate(
             f"stripped=[{', '.join(stripped) or 'none'}]"
         )
     else:
-        enhanced_system_prompt = base_prompt + personality_str + f"\n\n═══ CURRENT WORKSPACE TREE ═══\n{tree_str}\n" + file_content_str + context_str
+        # v10.1: In local mode, inject library content inline with other context
+        if is_strict:
+            enhanced_system_prompt = base_prompt + personality_str + library_context_str + f"\n\n═══ CURRENT WORKSPACE TREE ═══\n{tree_str}\n" + file_content_str + context_str
+        else:
+            enhanced_system_prompt = base_prompt + personality_str + f"\n\n═══ CURRENT WORKSPACE TREE ═══\n{tree_str}\n" + library_context_str + file_content_str + context_str
 
-    if getattr(body, "strict_library_mode", False):
-        enhanced_system_prompt += "\n\n⚠️ MODO RESTRITO ATIVADO (NotebookLM): VOCÊ ESTÁ TERMINANTEMENTE PROIBIDO DE UTILIZAR CONHECIMENTOS EXTERNOS. VOCÊ DEVE RESPONDER **EXCLUSIVAMENTE** COM BASE NOS MATERIAIS FORNECIDOS NO PAST_CONTEXT E WORKSPACE TREE ACIMA. SE A RESPOSTA NÃO ESTIVER NESTES MATERIAIS, INFORME QUE NÃO POSSUI A INFORMAÇÃO NA BIBLIOTECA. NÃO INVENTE CÓDIGO OU SOLUÇÕES FORA DO CONTEXTO FORNECIDO."
+    if is_strict:
+        # v10.1: Structured citation prompt with document list
+        try:
+            doc_list = lib_instance.get_document_list_summary()
+        except Exception:
+            doc_list = "[erro ao listar documentos]"
+
+        STRICT_LIBRARY_PROMPT = f"""
+
+═══ MODO BIBLIOTECA ATIVO ═══
+
+Você é um assistente de pesquisa especializado. Responda EXCLUSIVAMENTE
+com base nos documentos da biblioteca fornecidos acima.
+
+REGRAS OBRIGATÓRIAS:
+1. Cite SEMPRE a fonte usando o formato: [Fonte: nome_do_documento]
+   Para PDFs, inclua a página: [Fonte: nome_do_documento, Página X]
+2. Se a informação NÃO está nos documentos, diga claramente:
+   "Não encontrei essa informação nos documentos da biblioteca."
+3. NÃO invente, extrapole ou use conhecimento externo.
+4. Ao resumir, inclua referências inline aos documentos relevantes.
+5. Se múltiplos documentos cobrem o tema, cruze as informações e
+   cite cada fonte separadamente.
+6. Ao listar informações, agrupe por documento de origem.
+
+DOCUMENTOS DISPONÍVEIS NA BIBLIOTECA:
+{doc_list}
+"""
+        enhanced_system_prompt += STRICT_LIBRARY_PROMPT
 
     # ── Thinking Mode: Chain-of-Thought reasoning for better quality ──
     if getattr(body, "thinking_mode", False):
