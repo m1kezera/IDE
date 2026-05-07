@@ -429,15 +429,12 @@ class ProjectYLibrary:
             log.warning(f"⚠️ Failed to read {file_name}: {e}")
             return ""
 
-    def get_all_content_for_injection(self, max_tokens: int = 8000) -> str:
+    def get_all_content_for_injection(self) -> str:
         """Return all library document content formatted for prompt injection.
         
         Reads stored documents from disk and formats with source metadata
-        for citation. Respects token budget with per-document fair distribution.
+        for citation. Injects FULL content of every document — no truncation.
         
-        Args:
-            max_tokens: Maximum total tokens for all document content combined.
-            
         Returns:
             Formatted string with document headers and content ready for
             system prompt injection with citation markers.
@@ -446,24 +443,11 @@ class ProjectYLibrary:
         if not docs:
             return ""
 
-        # Calculate per-document budget
-        per_doc_budget = max(1000, max_tokens // max(len(docs), 1))
-
-        try:
-            from chunker import _encoding
-            use_tiktoken = True
-        except Exception:
-            _encoding = None
-            use_tiktoken = False
-
         sections = []
-        total_tokens = 0
+        total_chars = 0
         loaded_docs = []
 
         for doc_info in docs:
-            if total_tokens >= max_tokens:
-                break
-
             file_path = doc_info.get("path", "")
             doc_name = doc_info.get("name", "unknown")
             doc_type = doc_info.get("type", "txt")
@@ -473,24 +457,6 @@ class ProjectYLibrary:
             content = self._read_file_content(file_path)
             if not content:
                 continue
-
-            # Truncate content to per-document budget
-            if use_tiktoken:
-                tokens = _encoding.encode(content)
-                remaining_budget = max_tokens - total_tokens
-                doc_budget = min(per_doc_budget, remaining_budget)
-                if len(tokens) > doc_budget:
-                    content = _encoding.decode(tokens[:doc_budget])
-                    content += f"\n[...documento truncado, {len(tokens) - doc_budget} tokens restantes...]"
-                doc_tokens = min(len(tokens), doc_budget)
-            else:
-                max_chars = per_doc_budget * 4
-                remaining_chars = (max_tokens - total_tokens) * 4
-                doc_max = min(max_chars, remaining_chars)
-                if len(content) > doc_max:
-                    content = content[:doc_max]
-                    content += "\n[...documento truncado...]"
-                doc_tokens = len(content) // 4  # rough estimate
 
             # Build section with citation header
             meta_parts = [doc_type.upper()]
@@ -507,7 +473,7 @@ class ProjectYLibrary:
             section += content
             sections.append(section)
 
-            total_tokens += doc_tokens
+            total_chars += len(content)
             loaded_docs.append(doc_name)
 
         if not sections:
@@ -517,7 +483,7 @@ class ProjectYLibrary:
         header += f"Documentos: {', '.join(loaded_docs)}\n"
         result = header + "\n".join(sections) + "\n═══ FIM DA BIBLIOTECA ═══\n"
 
-        log.info(f"📚 [LibraryInject] Injected {len(loaded_docs)} docs, ~{total_tokens} tokens")
+        log.info(f"📚 [LibraryInject] Injected {len(loaded_docs)} docs, {total_chars} chars (full content, no truncation)")
         return result
 
     def get_document_list_summary(self) -> str:

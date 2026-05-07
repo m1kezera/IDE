@@ -577,7 +577,7 @@ async def generate(
         if lib_docs:
             if is_strict:
                 # In strict mode, inject full document content (higher budget)
-                library_context_str = lib_instance.get_all_content_for_injection(max_tokens=12000)
+                library_context_str = lib_instance.get_all_content_for_injection()
                 log.info(f"📚 [StrictMode] Full library injection: {len(library_context_str)} chars, {len(lib_docs)} docs")
             else:
                 # In normal mode, inject relevant passages via keyword search
@@ -739,7 +739,12 @@ async def generate(
             if not content:
                 continue
             layer_tokens = count_tokens(content)
-            if total_tokens + layer_tokens <= max_system_tokens:
+            # v10.1: In strict mode, library content is NEVER truncated
+            if is_strict and name == "library":
+                enhanced_system_prompt += content
+                total_tokens += layer_tokens
+                included.append(f"{name}({layer_tokens}t/FULL)")
+            elif total_tokens + layer_tokens <= max_system_tokens:
                 enhanced_system_prompt += content
                 total_tokens += layer_tokens
                 included.append(f"{name}({layer_tokens}t)")
