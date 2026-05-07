@@ -486,6 +486,55 @@ class ProjectYLibrary:
         log.info(f"📚 [LibraryInject] Injected {len(loaded_docs)} docs, {total_chars} chars (full content, no truncation)")
         return result
 
+    def get_chunked_content(self, chunk_size_tokens: int = 1200, overlap: int = 150) -> list:
+        """Split all library documents into equal-sized token chunks.
+        
+        Uses chunker.py's sliding window to create overlapping chunks that
+        fit inside smaller model context windows. Each chunk includes
+        document source metadata for citation.
+        
+        Args:
+            chunk_size_tokens: Max tokens per chunk (default 1200 for 4k models)
+            overlap: Token overlap between consecutive chunks for context continuity
+            
+        Returns:
+            List of dicts: [{"index": 0, "content": "...", "tokens": N, "sources": [...]}]
+        """
+        from chunker import chunk_code
+
+        docs = self.get_documents()
+        if not docs:
+            return []
+
+        # Read and concatenate all documents with source markers
+        full_text = ""
+        doc_names = []
+        for doc_info in docs:
+            file_path = doc_info.get("path", "")
+            doc_name = doc_info.get("name", "unknown")
+            content = self._read_file_content(file_path)
+            if not content:
+                continue
+            full_text += f"\n[DOCUMENTO: {doc_name}]\n{content}\n[FIM: {doc_name}]\n"
+            doc_names.append(doc_name)
+
+        if not full_text.strip():
+            return []
+
+        # Use chunker's sliding window
+        raw_chunks = chunk_code(full_text, max_tokens=chunk_size_tokens, overlap=overlap)
+
+        # Enrich chunks with source metadata
+        for chunk in raw_chunks:
+            chunk["sources"] = doc_names
+            chunk["total_chunks"] = len(raw_chunks)
+
+        log.info(
+            f"📚 [ChunkedContent] Split {len(doc_names)} docs into {len(raw_chunks)} chunks "
+            f"({chunk_size_tokens} tokens/chunk, {overlap} overlap)"
+        )
+        return raw_chunks
+
     def get_document_list_summary(self) -> str:
         """Return a compact summary of available library documents.
         

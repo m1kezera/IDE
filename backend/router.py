@@ -191,6 +191,138 @@ def _compact_history(history: List[dict], model: str, settings: Settings, keep_r
     return to_keep
 
 
+def _library_map_reduce(user_prompt: str, model: str, settings: Settings, mode: str = "local") -> str:
+    """Multi-pass chunked processing for large library documents.
+    
+    When library content exceeds the model's context window, this function:
+    1. MAP: Splits all docs into equal token chunks (sliding window + overlap)
+    2. MAP: Sends each chunk + user question to the model for extraction
+    3. REDUCE: Aggregates all chunk responses into a unified context string
+    
+    This allows even 4k-context models to consume entire PDFs/DOCXs.
+    
+    Returns:
+        Aggregated library context string ready for final prompt injection.
+    """
+    from library import library as lib_instance
+    from chunker import count_tokens
+    
+    # Determine chunk size based on model context (conservative: 60% of estimated ctx)
+    # Small local models ≈ 4k, medium ≈ 8k, large ≈ 32k
+    if mode == "cloud":
+        chunk_size = 4000  # cloud models handle large chunks
+    else:
+        try:
+            from model_tiers import detect_tier, ModelTier
+            tier = detect_tier(model)
+            chunk_sizes = {
+                ModelTier.SMALL: 1200,
+                ModelTier.MEDIUM: 2500,
+                ModelTier.LARGE: 4000,
+            }
+            chunk_size = chunk_sizes.get(tier, 1200)
+        except Exception:
+            chunk_size = 1200  # safe default for 4k models
+    
+    chunks = lib_instance.get_chunked_content(chunk_size_tokens=chunk_size, overlap=150)
+    if not chunks:
+        return ""
+    
+    # If only 1 chunk, no need for map-reduce — return directly
+    if len(chunks) == 1:
+        return chunks[0]["content"]
+    
+    log.info(
+        f"📚 [MapReduce] Processing {len(chunks)} chunks ({chunk_size} tokens/chunk) "
+        f"for query: {user_prompt[:60]}..."
+    )
+    
+    MAP_PROMPT = (
+        "Você é um extrator de informações. Dado o trecho de documento abaixo, "
+        "extraia APENAS as informações relevantes para a pergunta do usuário. "
+        "Se o trecho não contém informação relevante, responda exatamente: [SEM_INFO]. "
+        "Preserve citações, números, nomes e dados factuais. Seja conciso.\n\n"
+        f"PERGUNTA DO USUÁRIO: {user_prompt}\n\n"
+    )
+    
+    extracts = []
+    base_url = f"http://{settings.ollama_host}:{settings.ollama_port}"
+    
+    for i, chunk in enumerate(chunks):
+        chunk_prompt = MAP_PROMPT + f"TRECHO {i+1}/{len(chunks)}:\n{chunk['content']}"
+        
+        try:
+            if mode == "cloud":
+                # Cloud MAP call
+                from handler_cloud import CLOUD_BASE_URLS
+                api_key = getattr(settings, 'cloud_api_key', '')
+                provider = _detect_provider(api_key)
+                cloud_base = CLOUD_BASE_URLS.get(provider, "")
+                
+                headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+                resp = requests.post(
+                    f"{cloud_base}/chat/completions",
+                    headers=headers,
+                    json={
+                        "model": model,
+                        "messages": [
+                            {"role": "system", "content": "Extraia informações relevantes do documento. Seja conciso."},
+                            {"role": "user", "content": chunk_prompt},
+                        ],
+                        "max_tokens": 500,
+                        "stream": False,
+                    },
+                    timeout=(10, 60),
+                )
+                if resp.ok:
+                    data = resp.json()
+                    extract = data.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
+                else:
+                    extract = "[ERRO_CLOUD]"
+            else:
+                # Local Ollama MAP call
+                resp = requests.post(
+                    f"{base_url}/api/generate",
+                    json={
+                        "model": model,
+                        "prompt": chunk_prompt,
+                        "stream": False,
+                        "options": {"num_predict": 500},
+                    },
+                    timeout=(10, 120),
+                )
+                if resp.ok:
+                    extract = resp.json().get("response", "").strip()
+                else:
+                    extract = "[ERRO_LOCAL]"
+            
+            if extract and extract != "[SEM_INFO]":
+                extracts.append(f"[Chunk {i+1}] {extract}")
+                log.info(f"📚 [Map] Chunk {i+1}/{len(chunks)}: {len(extract)} chars extracted")
+            else:
+                log.info(f"📚 [Map] Chunk {i+1}/{len(chunks)}: no relevant info")
+                
+        except Exception as e:
+            log.warning(f"📚 [Map] Chunk {i+1}/{len(chunks)} failed: {e}")
+    
+    if not extracts:
+        log.warning("📚 [MapReduce] No relevant info found in any chunk")
+        return ""
+    
+    # REDUCE: Aggregate all extracts into a single context block
+    doc_list = lib_instance.get_document_list_summary()
+    reduced = f"\n\n═══ BIBLIOTECA (processada em {len(chunks)} fatias) ═══\n"
+    reduced += f"Documentos: {doc_list}\n"
+    reduced += f"{'═' * 60}\n"
+    reduced += "\n\n".join(extracts)
+    reduced += f"\n═══ FIM DA BIBLIOTECA ═══\n"
+    
+    log.info(
+        f"📚 [Reduce] Aggregated {len(extracts)}/{len(chunks)} chunks → "
+        f"{count_tokens(reduced)} tokens"
+    )
+    return reduced
+
 def _stream_with_logging_and_files(prompt: str, model: str, settings: Settings, fmt: Optional[str], enhanced_system_prompt: Optional[str] = None, history: Optional[List[dict]] = None, mode: str = "local"):
     """Dispatches to the correct tiered handler, logs usage, and writes file blocks after stream.
     
@@ -568,17 +700,43 @@ async def generate(
 
     # ─── Library Content Injection (v10.1) ────────────────────────
     # When strict_library_mode is ON: inject ALL library documents content
+    # If content exceeds model context → falls back to Map-Reduce chunking
     # When OFF but library has docs: inject keyword-matched passages
     library_context_str = ""
     is_strict = getattr(body, "strict_library_mode", False)
     try:
         from library import library as lib_instance
+        from chunker import count_tokens
         lib_docs = lib_instance.get_documents()
         if lib_docs:
             if is_strict:
-                # In strict mode, inject full document content (higher budget)
-                library_context_str = lib_instance.get_all_content_for_injection()
-                log.info(f"📚 [StrictMode] Full library injection: {len(library_context_str)} chars, {len(lib_docs)} docs")
+                # Try full injection first
+                full_content = lib_instance.get_all_content_for_injection()
+                full_tokens = count_tokens(full_content)
+                
+                # Estimate model context window
+                if body.mode == "cloud":
+                    model_ctx = 120000  # cloud models have large windows
+                else:
+                    try:
+                        from model_tiers import detect_tier, ModelTier
+                        tier = detect_tier(model)
+                        ctx_sizes = {ModelTier.SMALL: 4000, ModelTier.MEDIUM: 8000, ModelTier.LARGE: 32000}
+                        model_ctx = ctx_sizes.get(tier, 4000)
+                    except Exception:
+                        model_ctx = 4000
+                
+                # If content fits in ~70% of model context → inject directly
+                if full_tokens <= int(model_ctx * 0.7):
+                    library_context_str = full_content
+                    log.info(f"📚 [StrictMode] Full injection: {full_tokens} tokens, {len(lib_docs)} docs (fits in {model_ctx} ctx)")
+                else:
+                    # Content too large → Map-Reduce chunking
+                    log.info(
+                        f"📚 [StrictMode] Content too large ({full_tokens} tokens) for model ctx ({model_ctx}). "
+                        f"Falling back to Map-Reduce chunking..."
+                    )
+                    library_context_str = _library_map_reduce(body.prompt, model, settings, mode=body.mode)
             else:
                 # In normal mode, inject relevant passages via keyword search
                 passages = lib_instance.search_by_keywords(body.prompt, max_results=3)
