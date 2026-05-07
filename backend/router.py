@@ -965,7 +965,35 @@ DOCUMENTOS DISPONÍVEIS NA BIBLIOTECA:
 
     # ── Thinking Mode: Chain-of-Thought reasoning for better quality ──
     if getattr(body, "thinking_mode", False):
-        THINKING_PROMPT = """
+        if is_strict:
+            # Library-aware thinking: reason about documents
+            THINKING_PROMPT = """
+
+═══ THINKING MODE (Chain-of-Thought — Biblioteca) ═══
+
+ANTES de responder, você DEVE raciocinar passo a passo dentro de tags <thinking>.
+O conteúdo dentro de <thinking> é seu rascunho mental — o usuário pode optar por ver ou ocultar.
+
+Formato OBRIGATÓRIO:
+<thinking>
+1. Analisar a pergunta do usuário e identificar os conceitos-chave...
+2. Localizar nos documentos da biblioteca os trechos relevantes...
+3. Cruzar informações de múltiplos documentos se aplicável...
+4. Verificar se todas as afirmações têm fonte citável...
+5. Identificar lacunas — o que NÃO está nos documentos...
+</thinking>
+
+[Sua resposta final com citações [Fonte: doc, Página X]]
+
+REGRAS:
+- SEMPRE abra <thinking> ANTES da resposta final
+- Dentro de <thinking>: localize trechos, cruze fontes, verifique dados
+- Fora de <thinking>: resposta final limpa com citações inline
+- Se a informação não existe nos documentos, declare explicitamente
+"""
+        else:
+            # General-purpose thinking
+            THINKING_PROMPT = """
 
 ═══ THINKING MODE (Chain-of-Thought) ═══
 
@@ -989,7 +1017,7 @@ REGRAS:
 - Fora de <thinking>: resposta final limpa, sem repetir o raciocínio
 """
         enhanced_system_prompt += THINKING_PROMPT
-        log.info("🧠 [ThinkingMode] Chain-of-thought prompt injected")
+        log.info(f"🧠 [ThinkingMode] {'Library-aware' if is_strict else 'General'} chain-of-thought injected")
 
     # ── Hive v2.0: LLM Cache check (before any processing)
     if body.mode != "cloud":
