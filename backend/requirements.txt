@@ -1,9 +1,0 @@
-fastapi
-uvicorn
-sqlmodel
-requests
-tiktoken
-python-dotenv
-pydantic-settings
-websockets
-cryptography

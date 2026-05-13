@@ -1,0 +1,2 @@
+[console_scripts]
+lumina = lumina_cli.main:main
