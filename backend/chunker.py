@@ -42,8 +42,8 @@ class _FallbackEncoding:
 if _ENCODING is None:
     _ENCODING = _FallbackEncoding()
 
-DEFAULT_MAX_TOKENS = 4096
-DEFAULT_OVERLAP = 250
+DEFAULT_MAX_TOKENS = 1200
+DEFAULT_OVERLAP = 150
 
 
 def count_tokens(text: str) -> int:
@@ -56,7 +56,7 @@ def chunk_code(
     max_tokens: int = DEFAULT_MAX_TOKENS,
     overlap: int = DEFAULT_OVERLAP,
 ) -> list[dict]:
-    """Split *text* into overlapping token windows context-aware.
+    """Split *text* into overlapping token windows.
 
     Returns a list of dicts: ``[{"index": 0, "content": "...", "tokens": 800}, ...]``
     Files with ≤ *max_tokens* are returned as a single chunk.
@@ -76,15 +76,6 @@ def chunk_code(
         chunk_tokens = tokens[start:end]
         chunk_text = _ENCODING.decode(chunk_tokens)
 
-        # Smart Rewind: Avoid breaking code in the middle of a line
-        if end < total and "\n" in chunk_text:
-            last_newline = chunk_text.rfind("\n")
-            # Only rewind if we don't lose more than half the chunk
-            if last_newline > len(chunk_text) // 2:
-                chunk_text = chunk_text[:last_newline + 1]
-                chunk_tokens = _ENCODING.encode(chunk_text)
-                end = start + len(chunk_tokens)
-
         chunks.append({
             "index": idx,
             "content": chunk_text,
@@ -92,7 +83,7 @@ def chunk_code(
         })
 
         # Advance the window, keeping *overlap* tokens from the previous chunk
-        start = end - overlap
+        start += max_tokens - overlap
         idx += 1
 
     return chunks

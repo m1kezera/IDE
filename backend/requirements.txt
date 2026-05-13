@@ -7,12 +7,3 @@ python-dotenv
 pydantic-settings
 websockets
 cryptography
-ptyprocess
-psutil
-httpx
-zeroconf
-llama-cpp-python
-watchdog
-python-multipart
-prompt_toolkit
-rich

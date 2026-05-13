@@ -12,6 +12,7 @@ import logging
 import os
 import requests
 import uuid
+import torch
 import subprocess
 from datetime import datetime
 from typing import Optional, List, Set, Dict, Any
@@ -278,19 +279,6 @@ def _library_map_reduce(user_prompt: str, model: str, settings: Settings, mode: 
                     extract = data.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
                 else:
                     extract = "[ERRO_CLOUD]"
-            elif mode == "local" and (model.endswith(".gguf") or model.endswith(".safetensors")):
-                from local_engine import engine
-                try:
-                    models_dir = "/home/m1kezera/LuminaIDE/LinuxIDE/models"
-                    model_path = os.path.join(models_dir, model) if not model.startswith("/") else model
-                    engine.load_model(model_path, context_size=8192, gpu_layers=-1)
-                    
-                    full_map_prompt = f"SYSTEM: Extraia informações relevantes do documento. Seja conciso.\nUSER: {chunk_prompt}\nASSISTANT:"
-                    gen_stream = engine.stream_text(full_map_prompt, max_tokens=500)
-                    extract = "".join(list(gen_stream)).strip()
-                except Exception as e:
-                    log.error(f"God Mode Map Reduce failed: {e}")
-                    extract = "[ERRO_GOD_MODE]"
             else:
                 # Local Ollama MAP call
                 resp = requests.post(
@@ -422,10 +410,6 @@ def _stream_with_logging_and_files(prompt: str, model: str, settings: Settings, 
     if mode == "cloud":
         active_tier = ModelTier.CLOUD
         stream_gen = handler_cloud.stream(prompt, model, settings, fmt, enhanced_system_prompt=enhanced_system_prompt, history=history)
-    elif model.endswith('.gguf') or model in ('god-mode', 'godmode', 'god_mode'):
-        active_tier = ModelTier.LARGE
-        import handler_godmode
-        stream_gen = handler_godmode.stream(prompt, model, settings, fmt, enhanced_system_prompt=enhanced_system_prompt, history=history)
     else:
         active_tier = detect_tier(model)
         handler_map = {
@@ -561,32 +545,6 @@ def _generate_ollama_sync(prompt: str, model: str, settings: Settings, fmt: Opti
     """
     import time
     from agent import SYSTEM_PROMPT_TOOLS, SYSTEM_PROMPT_LEGACY
-    if model.endswith('.gguf') or model.endswith('.safetensors'):
-        from local_engine import engine
-        models_dir = "/home/m1kezera/LuminaIDE/LinuxIDE/models"
-        model_path = os.path.join(models_dir, model) if not model.startswith("/") else model
-        
-        try:
-            engine.load_model(model_path, context_size=4096, gpu_layers=-1)
-            # Simplistic prompt building for sync chunking
-            full_prompt = f"{enhanced_system_prompt or SYSTEM_PROMPT_TOOLS}\n\n"
-            if history:
-                for msg in history:
-                    full_prompt += f"{msg.get('role')}: {msg.get('content')}\n"
-            full_prompt += f"USER: {prompt}\nASSISTANT:"
-            
-            gen_stream = engine.stream_text(full_prompt, max_tokens=1024)
-            result_text = "".join(list(gen_stream))
-            
-            return {
-                "response": result_text,
-                "prompt_tokens": len(full_prompt) // 4,
-                "completion_tokens": len(result_text) // 4
-            }
-        except Exception as e:
-            log.error(f"Local Engine sync failed: {e}")
-            raise HTTPException(status_code=502, detail=f"God Mode generation failed: {e}")
-
     base_url = f"http://{settings.ollama_host}:{settings.ollama_port}"
 
     if history is None:
@@ -780,14 +738,14 @@ async def generate(
                     )
                     library_context_str = _library_map_reduce(body.prompt, model, settings, mode=body.mode)
             else:
-                # In normal mode, inject relevant passages via hybrid search (Semantic + BM25)
-                passages = await lib_instance.hybrid_search(body.prompt, max_results=3)
+                # In normal mode, inject relevant passages via keyword search
+                passages = lib_instance.search_by_keywords(body.prompt, max_results=3)
                 if passages:
                     library_context_str = "\n\n═══ REFERÊNCIAS DA BIBLIOTECA ═══\n"
                     for p in passages:
-                        library_context_str += f"\n--- De: {p.get('doc_name', 'unknown')} ---\n{p.get('content', '')}\n"
+                        library_context_str += f"\n--- De: {p['doc_name']} ---\n{p['content']}\n"
                     library_context_str += "═══ FIM DAS REFERÊNCIAS ═══\n"
-                    log.info(f"📚 [NormalMode] Hybrid library injection: {len(passages)} passages")
+                    log.info(f"📚 [NormalMode] Keyword library injection: {len(passages)} passages")
     except Exception as e:
         log.warning(f"Library injection failed: {e}")
 
@@ -1586,37 +1544,35 @@ async def dashboard(session: Session = Depends(get_session)):
 
 
 # ─── Models (Ollama detection) ──────────────────────────────────────
-@router.get("/models/local")
-async def list_local_models():
-    """List native GGUF models available in the models/ directory."""
-    models_dir = "/home/m1kezera/LuminaIDE/LinuxIDE/models"
-    models = []
-    
-    if os.path.exists(models_dir):
-        for f in os.listdir(models_dir):
-            if f.endswith(".gguf") or f.endswith(".safetensors"):
-                path = os.path.join(models_dir, f)
-                size_gb = round(os.path.getsize(path) / (1024 ** 3), 2)
-                models.append({
-                    "name": f,
-                    "model": f,
-                    "size_gb": size_gb,
-                    "modified_at": "",
-                    "family": "llama" if "llama" in f.lower() else ("qwen" if "qwen" in f.lower() else "unknown"),
-                    "parameter_size": "",
-                    "quantization": ""
-                })
-    return {"models": models, "count": len(models), "status": "connected"}
-
-@router.post("/models/unload")
-async def unload_model():
-    """Manually ejects the God Mode LLM from VRAM."""
-    from local_engine import engine
+@router.get("/models")
+async def list_models():
+    """Query the Ollama instance for all locally downloaded models."""
+    settings = get_settings()
     try:
-        engine.unload_model()
-        return {"status": "ok", "message": "VRAM liberada com sucesso."}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        resp = requests.get(
+            _ollama_url(settings, "/api/tags"),
+            timeout=10,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        models = []
+        for m in data.get("models", []):
+            size_gb = round(m.get("size", 0) / (1024 ** 3), 2)
+            models.append({
+                "name": m.get("name", ""),
+                "model": m.get("model", m.get("name", "")),
+                "size_gb": size_gb,
+                "modified_at": m.get("modified_at", ""),
+                "family": m.get("details", {}).get("family", ""),
+                "parameter_size": m.get("details", {}).get("parameter_size", ""),
+                "quantization": m.get("details", {}).get("quantization_level", ""),
+            })
+        return {"models": models, "count": len(models), "status": "connected"}
+    except requests.ConnectionError:
+        return {"models": [], "count": 0, "status": "offline", "error": "Cannot connect to Ollama"}
+    except requests.RequestException as exc:
+        return {"models": [], "count": 0, "status": "error", "error": str(exc)}
+
 
 # ─── Chat CRUD ──────────────────────────────────────────────────────
 @router.get("/chats")

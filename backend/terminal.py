@@ -22,50 +22,12 @@ if getattr(sys, 'frozen', False):
     else:
         print(f"[Terminal] WARNING: winpty directory not found at {_winpty_dir}")
 
-if sys.platform == 'win32':
-    import winpty
-else:
-    import ptyprocess
-
-class PTYWrapper:
-    def __init__(self, cols, rows, shell, cwd):
-        self.is_windows = sys.platform == 'win32'
-        if self.is_windows:
-            self.pty = winpty.PTY(cols, rows)
-            self.pty.spawn(shell, cwd=cwd)
-        else:
-            import shlex
-            env = os.environ.copy()
-            env['TERM'] = 'xterm-256color'
-            cmd = shlex.split(shell)
-            self.pty = ptyprocess.PtyProcessUnicode.spawn(cmd, cwd=cwd, env=env)
-            self.pty.setwinsize(rows, cols)
-            
-    def read(self, blocking=True):
-        if self.is_windows:
-            return self.pty.read(blocking)
-        else:
-            try:
-                return self.pty.read(4096)
-            except EOFError:
-                return ""
-            
-    def write(self, data):
-        self.pty.write(data)
-            
-    def set_size(self, cols, rows):
-        if self.is_windows:
-            self.pty.set_size(cols, rows)
-        else:
-            self.pty.setwinsize(rows, cols)
-            
-    def isalive(self):
-        return self.pty.isalive()
+import winpty
 
 router = APIRouter()
 
 # Global registry of active terminal processes mapped by port identifier
-ACTIVE_TERMINALS: Dict[str, PTYWrapper] = {}
+ACTIVE_TERMINALS: Dict[str, winpty.PTY] = {}
 TERMINAL_HISTORY: Dict[str, str] = {}
 
 def run_command_in_terminal(command: str, port: str = "cmd") -> bool:
@@ -195,7 +157,7 @@ def get_terminal_logs(port: str):
     return {"port": port, "logs": TERMINAL_HISTORY.get(port, "")}
 
 @router.websocket("/ws/terminal/{port}")
-async def terminal_websocket(websocket: WebSocket, port: str, shell: str = "bash" if sys.platform != "win32" else "powershell.exe"):
+async def terminal_websocket(websocket: WebSocket, port: str, shell: str = "powershell.exe"):
     await websocket.accept()
     loop = asyncio.get_running_loop()
 
@@ -204,18 +166,21 @@ async def terminal_websocket(websocket: WebSocket, port: str, shell: str = "bash
         ws._load_workspace_from_db()
         
         # Determine active CWD (default to root if no workspace is active)
-        active_cwd = "/" if sys.platform != "win32" else "C:\\"
+        active_cwd = "C:\\"
         if ws._workspace_path and os.path.exists(ws._workspace_path):
             active_cwd = ws._workspace_path
             
         print(f"[Terminal] Spawning {shell} in {active_cwd}")
         
         # Spawn Pseudo-Terminal (PTY) with retry logic
+        # Some Windows configurations fail on first attempt with a semaphore error
+        # (HRESULT 0x800700BB). Retrying usually succeeds.
         pty_process = None
         last_pty_error = None
         for pty_attempt in range(3):
             try:
-                pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                pty_process = winpty.PTY(80, 24)
+                pty_process.spawn(shell, cwd=active_cwd)
                 break  # Success
             except Exception as pty_err:
                 last_pty_error = pty_err
@@ -252,15 +217,18 @@ async def terminal_websocket(websocket: WebSocket, port: str, shell: str = "bash
         return
 
     async def read_from_pty():
-        """Lê os bytes crus do PTY e envia para a tela do Project Y"""
+        """Lê os bytes crus do PowerShell e envia para a tela do Project Y"""
         while True:
             try:
+                # pywinpty read receives `blocking` as its ONLY positional argument.
                 data = await loop.run_in_executor(None, pty_process.read, True)
                 if not data:
                     break
                 await websocket.send_text(data)
+            except winpty.WinptyError:
+                break  # Processo terminou
             except Exception as e:
-                print(f"[Terminal] Processo terminou ou Erro de leitura: {e}")
+                print(f"[Terminal] Erro de leitura: {e}")
                 break
 
     # Roda a leitura em background sem travar o FastAPI

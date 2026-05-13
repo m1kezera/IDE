@@ -638,27 +638,6 @@ def parse_file_blocks(text: str) -> list[dict]:
         if path:
             blocks.append({"path": path, "content": content, "op": "write"})
 
-    # ── GOD MODE JSON TOOL CALL PARSING ──
-    # Para modelos carregados via llama.cpp que respondem com blocos JSON formatados
-    json_block_re = re.compile(r'```json\n(\{.*?\})\n```', re.DOTALL | re.IGNORECASE)
-    for match in json_block_re.finditer(text):
-        try:
-            tool_data = json.loads(match.group(1))
-            name = tool_data.get("name")
-            args = tool_data.get("arguments", {})
-            if name == "file_write":
-                blocks.append({"path": args.get("path", "unknown"), "content": args.get("content", ""), "op": "write"})
-            elif name == "file_delete":
-                blocks.append({"path": args.get("path", "unknown"), "content": "", "op": "delete"})
-            elif name == "bash":
-                blocks.append({"path": f"Command: {args.get('command', '')}", "content": args.get('command', ''), "op": "command"})
-            elif name == "file_read":
-                blocks.append({"path": f"Read: {args.get('path', '')}", "content": args.get('path', ''), "op": "read"})
-            elif name == "search_files":
-                blocks.append({"path": f"Search: {args.get('query', '')}", "content": args.get('query', ''), "op": "search"})
-        except json.JSONDecodeError:
-            pass
-
     # ── FUZZY FALLBACK for 8B models that don't use FILE: syntax ──
     # Only runs if primary regex found no write blocks.
     # Catches patterns like:
@@ -956,43 +935,6 @@ def write_file_blocks(workspace_path: str, blocks: list[dict], override_protecti
                     results.append({"path": block["path"], "status": "not_found", "size": 0})
             except Exception as exc:
                 results.append({"path": block["path"], "status": "error", "error": str(exc)})
-            continue
-
-        # Handle EDIT (file_edit from God Mode JSON blocks)
-        if block.get("op") == "edit":
-            old_string = block.get("old_string", "")
-            new_string = block.get("new_string", "")
-            if not os.path.isfile(full_path):
-                if old_string == "":
-                    # Create new file
-                    os.makedirs(os.path.dirname(full_path), exist_ok=True)
-                    with open(full_path, "w", encoding="utf-8", newline="\n") as f:
-                        f.write(new_string)
-                    results.append({"path": block["path"], "status": "created", "size": len(new_string.encode("utf-8"))})
-                else:
-                    results.append({"path": block["path"], "status": "error", "error": "File not found for edit"})
-                continue
-
-            content = open(full_path, "r", encoding="utf-8", errors="ignore").read()
-            if old_string == "":
-                new_content = new_string
-            else:
-                count = content.count(old_string)
-                if count == 0:
-                    results.append({"path": block["path"], "status": "error", "error": "old_string not found"})
-                    continue
-                new_content = content.replace(old_string, new_string, 1)
-
-            with open(full_path, "w", encoding="utf-8", newline="\n") as f:
-                f.write(new_content)
-                
-            import difflib
-            old_lines = content.splitlines(keepends=True)
-            new_lines = new_content.splitlines(keepends=True)
-            diff_lines = list(difflib.unified_diff(old_lines, new_lines, fromfile=f"antes/{block['path']}", tofile=f"depois/{block['path']}", lineterm=""))
-            diff_str = "\n".join(diff_lines[:80])
-            
-            results.append({"path": block["path"], "status": "modified", "size": len(new_string.encode("utf-8")), "diff": diff_str})
             continue
 
         # Handle WRITE (create/modify)
