@@ -1,0 +1,69 @@
+# 📄 PRD: Lumina IDE v5.0 — Refatoração Arquitetural Suprema (React ➡️ Vanilla TypeScript)
+
+## 1. Visão Geral e Contexto
+**Projeto (Nome Comercial):** Lumina IDE v5.0
+**Codinome Interno (Backend/Codebase):** Project Y
+**Objetivo:** Migrar o frontend de React para Vanilla TypeScript (TS puro) usando Vite, estabelecendo a base definitiva da versão 5.0.
+**Motivação Arquitetural:** O uso do Virtual DOM (React) causava a destruição e recriação de componentes I/O pesados (`xterm.js`, Monaco/Editor) durante atualizações de estado assíncronas em background (ex: ping da rede Mesh, telemetria, Healer). Isso corrompia o túnel do WebSocket com o motor PTY nativo (PowerShell via `pywinpty`).
+**A Solução (Padrão VS Code):** O DOM será 100% estático, construído via HTML5 raiz e CSS Grid. Atualizações de interface alterarão **apenas** propriedades (`textContent`, `classList`) de nós estritos do DOM, garantindo a persistência absoluta e a imortalidade das instâncias do Terminal e do Editor, zerando o consumo de RAM de "Virtual DOMs".
+
+## 2. Stack Tecnológico (Target v5.0)
+* **Bundler & Dev Server:** Vite (template `vanilla-ts`).
+* **Linguagem:** TypeScript (Strict Mode ativado, tipagem rígida sem `any`).
+* **Estilização:** Tailwind CSS (via PostCSS) + Custom CSS nativo (`style.css` original, tema Catppuccin/Neon).
+* **Dependências Core:** `xterm`, `@xterm/addon-fit`, `@xterm/addon-web-links`.
+* **Comunicação:** WebSockets nativos do Browser (Terminal/Mesh) e `fetch` nativo (API REST).
+* **Gerenciamento de Estado/Eventos:** Padrão Pub/Sub (EventTarget ou CustomEvents nativos) para isolamento cirúrgico de UI.
+
+## 3. Arquitetura de Diretórios
+/frontend
+├── index.html                 (Layout Mestre Estático)
+├── style.css                  (Variáveis raiz e importações Tailwind)
+├── tailwind.config.js         (Mantido do projeto original)
+├── tsconfig.json              (Configuração rigorosa de tipagem)
+├── /src
+│   ├── main.ts                (Ponto de entrada, bootstrapping da IDE)
+│   ├── /core
+│   │   ├── TerminalManager.ts (Encapsula xterm.js, PTY e Reconnection Logic)
+│   │   ├── EditorManager.ts   (Encapsula área de código e Ghost Text)
+│   │   ├── PubSub.ts          (Barramento de eventos global)
+│   ├── /ui
+│   │   ├── Sidebar.ts         (Lógica do File Explorer e ícones)
+│   │   ├── Telemetry.ts       (Atualização cirúrgica da barra superior via DOM ID)
+│   │   ├── Modals.ts          (Exibição de Identity/Sentinel Panic Mode)
+│   └── /api
+│       └── client.ts          (Funções fetch fortemente tipadas para o backend Python)
+
+## 4. Estrutura do DOM (O `index.html` Mestre)
+O layout base usa CSS Grid. As zonas que abrigam componentes de I/O devem possuir IDs únicos e **nunca** sofrerão *unmount* via script.
+
+**Requisitos Críticos:**
+* `#ide-layout`: Contêiner raiz (`display: grid`).
+* `#terminal-container`: **Zona Blindada.** `div` vazia e estática onde o motor do `xterm.js` será anexado na inicialização.
+* `#editor-container`: **Zona Blindada.** Onde o texto e os *overlays* do Agente viverão.
+* Componentes dinâmicos (Mesh, uso de RAM) usarão IDs diretos (ex: `#mesh-node-count`) para receber injeção direta via TypeScript.
+
+## 5. Especificações de Módulos (TypeScript)
+
+### Módulo A: Terminal Manager (`src/core/TerminalManager.ts`)
+* **Fluxo Estrito:**
+  1. Instanciar `Terminal` com tema compatível e carregar `FitAddon`.
+  2. Acoplar ao DOM: `term.open(document.getElementById('terminal-container') as HTMLDivElement)`.
+  3. Iniciar conexão `WebSocket` apontando para o backend Python local (`ws://127.0.0.1:8001/ws/terminal/default`).
+  4. Ligar os eventos `term.onData` ao `ws.send`.
+* **Resiliência:** O túnel deve possuir um mecanismo de reconexão (`backoff` exponencial) protegido por `try/catch` nativo para absorver quedas do motor.
+
+### Módulo B: Barramento de Eventos (`src/core/PubSub.ts`)
+* Implementar classe `EventEmitter` customizada ou usar `EventTarget`.
+* **Regra:** O componente de rede Mesh recebe um payload do backend e emite o evento via PubSub. O módulo de Telemetria escuta esse evento e altera o `innerText` do elemento no HTML de forma independente. Zero acoplamento entre módulos.
+
+### Módulo C: Active Defense & Modals (`src/ui/Modals.ts`)
+* **Sentinel Panic Mode:** Escuta eventos de segurança. Se o backend disparar flag de intrusão, o TS altera a propriedade `style.display` do modal de pânico de `none` para `flex`, sobrepondo o `z-index` máximo sem destruir as camadas inferiores.
+* **Identity Lock:** Validação inicial do Hardware ID contra o banco de dados LanceDB.
+
+## 6. Critérios de Aceitação Estritos para IA (Diretrizes de Geração)
+Ao analisar este documento e gerar os arquivos, o agente de IA deve obedecer de forma inegociável a:
+1. **Nomenclatura Híbrida (A Regra de Ouro):** Toda a interface do usuário (textos visíveis em HTML e alertas) deve ostentar a marca **Lumina IDE**. No entanto, para não quebrar o ecossistema backend, **TODAS** as variáveis de código, rotas de API REST/WS, prefixos criptográficos (ex: `PROJECTY_ENC:`), IDs do DOM e classes CSS devem obrigatoriamente manter a string base `projecty` ou `project_y`.
+2. **Exílio de Frameworks:** Nenhuma importação de React, Vue, Svelte ou JSX. Código puramente imperativo.
+3. **Tipagem Impiedosa:** O uso de `any` causará falha no build. Todos os retornos de API, variáveis e referências ao DOM devem ser moldados com interfaces TypeScript explícitas.
+4. **Respeito ao Layout Estático:** A estrutura de Grid do HTML deve ser o ponto de ancoragem de todo o sistema visual, preservando o tema estilizado com as regras existentes do Tailwind.

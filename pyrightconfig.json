@@ -1,0 +1,17 @@
+{
+    "pythonVersion": "3.9",
+    "pythonPlatform": "Windows",
+    "venvPath": "./backend",
+    "venv": ".venv",
+    "extraPaths": [
+        "./backend"
+    ],
+    "executionEnvironments": [
+        {
+            "root": "backend",
+            "extraPaths": [
+                "."
+            ]
+        }
+    ]
+}

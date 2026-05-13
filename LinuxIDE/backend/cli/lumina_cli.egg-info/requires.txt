@@ -1,5 +1,0 @@
-httpx
-rich
-prompt_toolkit
-psutil
-textual

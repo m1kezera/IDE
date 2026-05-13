@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+*.db
+
+# Node
+node_modules/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+
+# Build artifacts
+release/
+build/
+*.spec
+dist/
+dist_final/
+dist_new/
+backend/dist_final/
+backend/dist_new/
+backend/build/
+backend/logs/
+backend/temp_docs/
+backend/brain/
+backend/brain_knowledge/
+backend/workspace/
+backend/lumina_extensions/
+backend/models/
+backend/import_errors.log
+backend/shield_status.log
+backend/out.txt
+backend/pulsyce.db
+backend/library_state.json
+backend/memories.json
+backend/*.migrated.bak
+
+# Test artifacts
+backend/test_*.py
+
+# Large files
+*.zip
+*.exe
+*.msi
+logs/
+workspace/
+/patches/
+py_scripts/
+_stage/
+logodark/
+logodefinitiva/
+import_errors.log
