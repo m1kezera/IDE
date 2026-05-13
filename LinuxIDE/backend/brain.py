@@ -53,8 +53,10 @@ class ProjectYBrain:
         self._index_cache = {} # Cache de hashes para evitar re-indexação redundante
         self.last_pulse_time = 0
         
+        self._ram_fallback = [] # Armazena trechos em RAM quando LanceDB falta
+        
         if not _DEPS_OK:
-            log.warning("🧠 Brain em modo degradado (dependências faltando) — still reporting ready")
+            log.warning("🧠 Brain em modo degradado (dependências faltando) — usando fallback em RAM")
             return
         
         os.makedirs(DB_PATH, exist_ok=True)
@@ -125,10 +127,29 @@ class ProjectYBrain:
         if not self.is_ready:
             return
         
-        # Guard: skip indexing if dependencies are missing (degraded mode)
+        # Guard: skip indexing if dependencies are missing (use RAM fallback)
         if self.model is None or self.db is None or _pd is None:
+            # Fallback para RAM
+            if content:
+                # Remove memórias velhas do mesmo arquivo (Prevenir Stale Memory Poisoning)
+                self._ram_fallback = [m for m in self._ram_fallback if m["file_path"] != file_path]
+                
+                chunks = self._chunk_code(content)
+                import time
+                current_time = time.time()
+                for chunk in chunks:
+                    self._ram_fallback.append({
+                        "text": chunk,
+                        "file_path": file_path,
+                        "source_type": source_type,
+                        "tag": tag,
+                        "timestamp": current_time
+                    })
+                # Evita que a RAM exploda, mantém no máximo os últimos 500 chunks
+                if len(self._ram_fallback) > 500:
+                    self._ram_fallback = self._ram_fallback[-500:]
             return
-        
+
         # Guard: skip if content is None/empty
         if not content:
             return
@@ -182,8 +203,30 @@ class ProjectYBrain:
 
     async def search_context(self, query: str, limit: int = 3) -> List[Dict[str, Any]]:
         """Busca os trechos de código mais parecidos com a query."""
-        if not self.is_ready or self.table is None or self.model is None:
+        if not self.is_ready:
             return []
+            
+        if self.table is None or self.model is None:
+            # Fallback em RAM (Keyword matching)
+            query_words = set(query.lower().split())
+            scored = []
+            for item in self._ram_fallback:
+                item_words = set(item["text"].lower().split())
+                overlap = len(query_words & item_words)
+                if overlap > 0:
+                    scored.append((overlap, item))
+            scored.sort(key=lambda x: -x[0])
+            
+            formatted = []
+            for score, res in scored[:limit]:
+                formatted.append({
+                    "content": res["text"],
+                    "file": res["file_path"],
+                    "source_type": res.get("source_type", "code"),
+                    "tag": res.get("tag", ""),
+                    "score": float(score)
+                })
+            return formatted
 
         try:
             query_vector = self.model.encode(query).tolist()

@@ -1,0 +1,60 @@
+[ROUTER IMPORT FAIL] No module named 'torch'
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 91, in <module>
+    from router import router as api_router
+  File "/app/backend/router.py", line 15, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+
+[ROUTER IMPORT FAIL] No module named 'watchdog'
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 91, in <module>
+    from router import router as api_router
+  File "/app/backend/router.py", line 31, in <module>
+    from watcher import get_watcher
+  File "/app/backend/watcher.py", line 8, in <module>
+    from watchdog.observers import Observer
+ModuleNotFoundError: No module named 'watchdog'
+
+[ROUTER IMPORT FAIL] No module named 'watchdog'
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 91, in <module>
+    from router import router as api_router
+  File "/app/backend/router.py", line 31, in <module>
+    from watcher import get_watcher
+  File "/app/backend/watcher.py", line 8, in <module>
+    from watchdog.observers import Observer
+ModuleNotFoundError: No module named 'watchdog'
+
+[ROUTER IMPORT FAIL] Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+Traceback (most recent call last):
+  File "/app/backend/main.py", line 91, in <module>
+    from router import router as api_router
+  File "/app/backend/router.py", line 1274, in <module>
+    @router.post("/library/upload")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 1450, in decorator
+    self.add_api_route(
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 1386, in add_api_route
+    route = route_class(
+            ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 949, in __init__
+    self.dependant = get_dependant(
+                     ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/dependencies/utils.py", line 311, in get_dependant
+    param_details = analyze_param(
+                    ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/dependencies/utils.py", line 535, in analyze_param
+    ensure_multipart_is_installed()
+  File "/usr/local/lib/python3.12/site-packages/fastapi/dependencies/utils.py", line 120, in ensure_multipart_is_installed
+    raise RuntimeError(multipart_not_installed_error) from None
+RuntimeError: Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+

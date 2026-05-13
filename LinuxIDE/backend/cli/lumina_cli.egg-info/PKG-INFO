@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: lumina-cli
+Version: 1.0.0
+Summary: Standalone CLI for Lumina God Mode Engine (Claude Code style)
+Author: Lumina IDE
+Requires-Dist: httpx
+Requires-Dist: rich
+Requires-Dist: prompt_toolkit
+Requires-Dist: psutil
+Requires-Dist: textual
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary

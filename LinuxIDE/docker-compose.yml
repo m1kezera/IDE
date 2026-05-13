@@ -1,0 +1,19 @@
+services:
+  backend:
+    image: nvidia/cuda:12.4.1-runtime-ubuntu22.04
+    container_name: lumina-backend
+    network_mode: "host"
+    working_dir: /app/backend
+    runtime: nvidia
+    volumes:
+      - ./backend:/app/backend
+      - /home/m1kezera:/home/m1kezera
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - PYTHONUNBUFFERED=1
+      - NVIDIA_VISIBLE_DEVICES=all
+    command: >
+      bash -c "apt-get update && apt-get install -y python3-pip python3-venv zenity curl libgomp1 &&
+      python3 -m venv /opt/venv &&
+      /opt/venv/bin/pip install --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu124 -r requirements.txt &&
+      /opt/venv/bin/uvicorn main:app --host 0.0.0.0 --port 8001"

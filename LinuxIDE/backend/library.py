@@ -627,6 +627,49 @@ class ProjectYLibrary:
 
         return results
 
+    async def hybrid_search(self, query: str, max_results: int = 3, max_chars_per_result: int = 2000) -> List[Dict]:
+        """Hybrid search combining Semantic Vector Search and Keyword BM25 fallback.
+        As recommended by memory-systems skill, hybrid retrieval yields the best accuracy.
+        """
+        results = []
+        
+        # 1. Tenta Busca Semântica (Vector Search do Brain)
+        try:
+            semantic_results = await brain.search_library(query, limit=max_results)
+            if semantic_results:
+                # O brain retorna {'content', 'file', 'score'}
+                for r in semantic_results:
+                    r['doc_name'] = os.path.basename(r.get('file', 'unknown'))
+                results.extend(semantic_results)
+        except Exception as e:
+            log.warning(f"Semantic search failed, relying on keyword fallback: {e}")
+            
+        # 2. Busca por Palavras-Chave (Keyword Search)
+        keyword_results = self.search_by_keywords(query, max_results=max_results, max_chars_per_result=max_chars_per_result)
+        
+        # 3. Combina e Remove Duplicatas (Reciprocal Rank Fusion simplificado)
+        seen_content = set()
+        final_results = []
+        
+        # Intercala os resultados para dar peso justo a ambas estratégias
+        all_items = []
+        for pair in zip(results, keyword_results):
+            all_items.extend(pair)
+        # Adiciona o restante caso uma lista seja maior
+        all_items.extend(results[len(keyword_results):])
+        all_items.extend(keyword_results[len(results):])
+        
+        for item in all_items:
+            content = item.get("content", "")
+            fingerprint = content[:100].strip().lower()
+            if fingerprint not in seen_content:
+                seen_content.add(fingerprint)
+                final_results.append(item)
+                
+        final_results = final_results[:max_results]
+        log.info(f"📚 [HybridSearch] Returned {len(final_results)} hybrid passages.")
+        return final_results
+
 
 # Singleton
 library = ProjectYLibrary()

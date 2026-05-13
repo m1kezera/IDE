@@ -1,0 +1,2954 @@
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600444794 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600971622 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600971622 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600971622 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600971622 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600971622 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600971622 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600971622 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600971622 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600971622 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600971622 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600971622 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600971622 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+
+--- term-1778600971622 error ---
+Traceback (most recent call last):
+  File "/app/backend/terminal.py", line 230, in terminal_websocket
+    raise last_pty_error or RuntimeError("PTY spawn failed after 3 attempts")
+  File "/app/backend/terminal.py", line 216, in terminal_websocket
+    pty_process = PTYWrapper(80, 24, shell, active_cwd)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/terminal.py", line 39, in __init__
+    self.pty = ptyprocess.PtyProcessUnicode.spawn([shell], cwd=cwd, env=env)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/ptyprocess/ptyprocess.py", line 215, in spawn
+    raise FileNotFoundError('The command was not found or was not ' +
+FileNotFoundError: The command was not found or was not executable: powershell.
+

@@ -70,6 +70,14 @@ def _load_workspace_from_db():
                 _workspace_path = cfg.value
     except Exception:
         pass
+        
+    if not _workspace_path:
+        # Default to the user's ideias folder if no workspace is saved
+        default_ws = "/home/m1kezera/ideias"
+        if os.path.isdir(default_ws):
+            _workspace_path = default_ws
+        else:
+            _workspace_path = "/home/m1kezera"
 
 
 def _save_workspace_to_db(path: str):
@@ -188,88 +196,6 @@ async def open_folder(body: OpenFolderRequest):
     _workspace_path = path
     _save_workspace_to_db(path)
     return {"path": _workspace_path, "status": "opened"}
-
-
-@router.get("/browse")
-async def browse_folder():
-    import subprocess
-    import sys
-    try:
-        if sys.platform == 'win32':
-            # Modern Windows native folder picker (IFileOpenDialog via COM)
-            # This is the same dialog used by modern apps — with sidebar,
-            # favorites, search bar etc. NOT the ancient FolderBrowserDialog.
-            ps_script = r'''
-Add-Type -TypeDefinition @"
-using System;
-using System.Runtime.InteropServices;
-
-[ComImport, Guid("DC1C5A9C-E88A-4DDE-A5A1-60F82A20AEF7")]
-class FileOpenDialog {}
-
-[ComImport, Guid("42F85136-DB7E-439C-85F1-E4075D135FC8"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-interface IFileOpenDialog {
-    [PreserveSig] int Show([In] IntPtr hwnd);
-    void SetFileTypes();
-    void SetFileTypeIndex();
-    void GetFileTypeIndex();
-    void Advise();
-    void Unadvise();
-    void SetOptions([In] uint fos);
-    void GetOptions();
-    void SetDefaultFolder();
-    void SetFolder();
-    void GetFolder();
-    void GetCurrentSelection();
-    void SetFileName();
-    void GetFileName();
-    void SetTitle([In, MarshalAs(UnmanagedType.LPWStr)] string pszTitle);
-    void SetOkButtonLabel();
-    void SetFileNameLabel();
-    [PreserveSig] int GetResult(out IShellItem ppsi);
-}
-
-[ComImport, Guid("43826D1E-E718-42EE-BC55-A1E261C37BFE"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-interface IShellItem {
-    void BindToHandler();
-    void GetParent();
-    void GetDisplayName([In] uint sigdnName, [MarshalAs(UnmanagedType.LPWStr)] out string ppszName);
-}
-"@
-
-$dlg = New-Object FileOpenDialog
-$ifo = [IFileOpenDialog]$dlg
-$ifo.SetOptions(0x20)  # FOS_PICKFOLDERS
-$ifo.SetTitle("Selecione a pasta do projeto")
-$hr = $ifo.Show([IntPtr]::Zero)
-if ($hr -eq 0) {
-    $item = $null
-    $ifo.GetResult([ref]$item)
-    $path = $null
-    $item.GetDisplayName(0x80058000, [ref]$path)
-    Write-Output $path
-}
-'''
-            result = subprocess.check_output(
-                ["powershell", "-NoProfile", "-Command", ps_script],
-                text=True, timeout=120
-            ).strip()
-            folder = result
-        else:
-            # Fallback for non-Windows: try tkinter
-            script = "import tkinter as tk, tkinter.filedialog as fd; root=tk.Tk(); root.withdraw(); root.attributes('-topmost', True); print(fd.askdirectory())"
-            folder = subprocess.check_output([sys.executable, "-c", script], text=True, timeout=120).strip()
-        
-        if folder and os.path.isdir(folder):
-            global _workspace_path, _loaded
-            _loaded = True
-            ws_path = os.path.abspath(folder)
-            _workspace_path = ws_path
-            _save_workspace_to_db(ws_path)
-            return {"path": ws_path, "status": "opened"}
-    except Exception:
-        pass
-    return {"path": None, "status": "cancelled"}
 
 
 @router.get("/tree")
